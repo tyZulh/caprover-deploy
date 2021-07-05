@@ -7,6 +7,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
+      console.log(process.env.REACT_APP_API_BASE_URL);
       const res = await axios.get(process.env.REACT_APP_API_BASE_URL);
       setContacts(res.data);
     };
